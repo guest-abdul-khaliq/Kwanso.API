@@ -124,8 +124,6 @@ namespace Kwanso.Api.Controllers
         //    return Ok(new Response { Status = "Success", Message = "User created successfully!" });
         //}
 
-
-
         [HttpPost]
         [Route("user")]
         [Authorize]

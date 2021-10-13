@@ -48,8 +48,6 @@ namespace Kwanso.Api
                 options.RequireHttpsMetadata = false;
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
-                    //ValidateIssuer = false,
-                    //ValidateAudience = false,
                     ValidateIssuer = true,
                     ValidateAudience = true,
                     ValidAudience = Configuration["JWT:ValidAudience"],

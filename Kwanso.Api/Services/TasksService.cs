@@ -1,18 +1,15 @@
 ﻿using Kwanso.Api.Interfaces;
 using Kwanso.Api.Models;
 using Kwanso.Api.ViewModels;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Kwanso.Api.Services
 {
     public class TasksService : ITasksService
     {
         private readonly ApplicationDbContext _db;
-
         public TasksService(ApplicationDbContext db)
         {
             _db = db;
@@ -58,13 +55,11 @@ namespace Kwanso.Api.Services
                     task.IsDelete = true;
                     _db.SaveChanges();
                 }
-                
             }
             catch (Exception ex)
             {
 
             }
         }
-
     }
 }
