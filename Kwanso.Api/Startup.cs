@@ -21,7 +21,6 @@ namespace Kwanso.Api
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -58,8 +57,6 @@ namespace Kwanso.Api
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
                 };
             });
-
-
 
             services.AddSwaggerGen(swagger =>
             {
